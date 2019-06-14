@@ -47,10 +47,10 @@ with open(csvpath, newline="") as csvfile:
         if GreatestDEcrease > change:
             GreatestDEcrease = change
             GreatestDEcrease_Date = next_date
-        sum_change = sum_change + float(change)   
+        sum_change = sum_change + change  
     # Add initial values to total and total count that were not included in loop, and calculate average change
     total = int(start_value) + total
-    average_change = float(sum_change) // float(total_count)
+    average_change = sum_change / total_count
     total_count = total_count + 1
     # Print Financial Analysis summary
     print(f"""
